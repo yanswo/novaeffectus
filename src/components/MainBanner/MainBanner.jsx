@@ -4,7 +4,7 @@ import "./MainBanner.css";
 function MainBanner() {
   return (
     <section className="main-banner-section">
-      <div className="container main-banner-container">
+      <div className="container main-banner-container animate-on-load fade-in-up">
         <div className="main-banner-media">
           <img
             src="https://placehold.co/500x500/f8fafc/1e293b?text=Visual"

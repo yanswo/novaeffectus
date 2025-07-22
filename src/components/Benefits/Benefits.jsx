@@ -23,7 +23,7 @@ function Benefits() {
   return (
     <section className="benefits-section">
       <div className="container benefits-container">
-        <div className="benefits-content-sticky">
+        <div className="benefits-content-sticky animate-on-load fade-in-up">
           <h2>Por que NovaPay?</h2>
           <p>
             Cartões virtuais seguros vinculados às suas contas em EUR ou PLN.
@@ -32,7 +32,12 @@ function Benefits() {
         </div>
         <div className="benefits-cards-wrapper">
           {benefitsData.map((benefit, index) => (
-            <div className="benefit-card" key={index}>
+            <div
+              className={`benefit-card animate-on-load fade-in-up delay-${
+                (index + 1) * 200
+              }`}
+              key={index}
+            >
               <h3>{benefit.title}</h3>
               <p>{benefit.description}</p>
             </div>

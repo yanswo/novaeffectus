@@ -51,7 +51,7 @@ function IntroCards() {
   return (
     <section className="intro-cards-section">
       <div className="container">
-        <div className="section-header">
+        <div className="section-header animate-on-load fade-in-up">
           <h2>Sua Carteira Digital para EUR e PLN</h2>
           <p>
             Abra suas contas em EUR e PLN em poucos minutos. Ótimo para as
@@ -60,7 +60,12 @@ function IntroCards() {
         </div>
         <div className="intro-cards-grid">
           {cardsData.map((card, index) => (
-            <div className="intro-card" key={index}>
+            <div
+              className={`intro-card animate-on-load fade-in-up ${
+                index === 1 ? "delay-200" : ""
+              }`}
+              key={index}
+            >
               <div className="intro-card-icon">{card.icon}</div>
               <h3 className="intro-card-title">{card.title}</h3>
               <p className="intro-card-description">{card.description}</p>

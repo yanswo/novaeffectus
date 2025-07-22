@@ -28,7 +28,12 @@ function Features() {
       <div className="container">
         <div className="features-content-box">
           {featuresData.map((feature, index) => (
-            <div className="feature-block" key={index}>
+            <div
+              className={`feature-block animate-on-load fade-in-up delay-${
+                (index + 1) * 200
+              }`}
+              key={index}
+            >
               <div className="feature-image">
                 <img src={feature.imageUrl} alt={feature.title} />
               </div>

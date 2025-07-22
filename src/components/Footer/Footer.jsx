@@ -16,7 +16,7 @@ const footerMenu = {
 
 function Footer() {
   return (
-    <footer className="site-footer">
+    <footer className="site-footer animate-on-load fade-in">
       <div className="container footer-grid">
         <div className="footer-column footer-brand">
           <a href="/" className="footer-logo">
@@ -24,7 +24,6 @@ function Footer() {
           </a>
           <p>Serviços financeiros para o seu dia a dia na Europa.</p>
         </div>
-
         {Object.entries(footerMenu).map(([title, links]) => (
           <div className="footer-column" key={title}>
             <h3>{title}</h3>

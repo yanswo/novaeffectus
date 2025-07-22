@@ -4,7 +4,7 @@ import "./ActionBanner.css";
 function ActionBanner() {
   return (
     <section className="action-banner-section">
-      <div className="container">
+      <div className="container animate-on-load fade-in-up">
         <h2 className="action-banner-title">Simplifique Suas Finanças Hoje</h2>
         <div className="action-banner-button-wrapper">
           <div className="wave"></div>

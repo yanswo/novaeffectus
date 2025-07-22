@@ -1,21 +1,56 @@
 .features-section {
   padding: 120px 0;
   background-color: var(--background-dark);
+  color: var(--text-light);
   position: relative;
+  overflow: hidden;
+}
+
+.features-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 245, 195, 0.05),
+    transparent 70%
+  );
+  pointer-events: none;
 }
 
 .features-content-box {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 120px;
   padding: 80px;
   border-radius: var(--border-radius-large);
-
   background: var(--primary-dark-glass);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(0, 245, 195, 0.2);
+  transition: background var(--transition-speed);
+}
+
+.features-content-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: radial-gradient(
+    400px circle at var(--mouse-x, -200px) var(--mouse-y, -200px),
+    rgba(0, 245, 195, 0.2),
+    transparent 80%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }
 
 .feature-block {
@@ -27,21 +62,27 @@
 
 .feature-image {
   flex-shrink: 0;
+  border-radius: 50%;
+  padding: 1rem;
+  background: radial-gradient(circle, rgba(0, 245, 195, 0.1), transparent 70%);
+  max-width: 400px;
 }
 
 .feature-image img {
-  border-radius: var(--border-radius-small);
+  border-radius: 50%;
+  transform: scale(0.9);
+  transition: transform var(--transition-speed);
 }
 
-.feature-text {
-  color: var(--text-light);
+.feature-block:hover .feature-image img {
+  transform: scale(1);
 }
 
 .feature-text h2 {
   font-size: 3rem;
   line-height: 1.1;
   margin-bottom: 24px;
-  color: var(--primary-color);
+  color: #fff;
 }
 
 .feature-text p {
@@ -56,10 +97,11 @@
     gap: 80px;
   }
   .feature-image {
-    width: 50%;
+    width: 45%;
+    max-width: 450px;
   }
   .feature-text {
-    width: 50%;
+    width: 55%;
   }
   .feature-block:nth-child(odd) {
     flex-direction: row-reverse;
