@@ -1,0 +1,104 @@
+.support-options-section {
+  padding: 80px 16px;
+  background-color: #f8f9fa;
+}
+
+.support-options-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.support-options-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+}
+
+.support-options-subtitle {
+  font-size: 18px;
+  color: #6c757d;
+}
+
+.support-cards-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.support-card {
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    var(--secondary-accent) 0%,
+    var(--accent-light-blue) 100%
+  );
+  color: white;
+  padding: 40px;
+  border-radius: 24px;
+  overflow: hidden;
+  will-change: transform, opacity;
+}
+
+.support-card h3 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 2;
+}
+
+.support-card p {
+  font-size: 16px;
+  max-width: 80%;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 2;
+  opacity: 0.9;
+}
+
+.support-card a {
+  color: var(--neutral-white);
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  transition: border-color var(--transition-speed);
+  position: relative;
+  z-index: 2;
+}
+
+.support-card a:hover {
+  border-color: var(--neutral-white);
+}
+
+.icon-background {
+  position: absolute;
+  bottom: -40px;
+  right: -30px;
+  font-size: 200px;
+  font-weight: bold;
+  z-index: 1;
+  opacity: 0.07;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.icon-background.email::after {
+  content: "✉";
+}
+
+.icon-background.phone::after {
+  content: "📞";
+}
+
+@media (min-width: 768px) {
+  .support-cards-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+  .support-options-title {
+    font-size: 56px;
+  }
+}

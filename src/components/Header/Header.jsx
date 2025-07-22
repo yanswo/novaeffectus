@@ -1,29 +1,31 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./Header.css";
 
 function Header({ theme }) {
   return (
     <header className={`site-header ${theme}`}>
       <div className="container header-wrapper">
-        <a href="/" className="logo">
+        <NavLink to="/" className="logo">
           NovaPay
-        </a>
+        </NavLink>
         <nav className="main-nav">
           <ul>
             <li>
-              <a href="#" className="nav-link">
+              {}
+              <a href="/#servicos" className="nav-link">
                 Serviços
               </a>
             </li>
             <li>
-              <a href="#" className="nav-link">
+              <NavLink to="/sobre" className="nav-link">
                 Sobre
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="#" className="nav-link">
+              <NavLink to="/suporte" className="nav-link">
                 Suporte
-              </a>
+              </NavLink>
             </li>
           </ul>
         </nav>
