@@ -1,12 +1,11 @@
 import React from "react";
 import "./Header.css";
 
-function Header() {
+function Header({ theme }) {
   return (
-    <header className="site-header">
+    <header className={`site-header ${theme}`}>
       <div className="container header-wrapper">
         <a href="/" className="logo">
-          {}
           NovaPay
         </a>
         <nav className="main-nav">
