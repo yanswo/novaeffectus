@@ -4,8 +4,9 @@ import "./Header.css";
 function Header() {
   return (
     <header className="site-header">
-      <div className="container header-container">
+      <div className="container header-wrapper">
         <a href="/" className="logo">
+          {}
           NovaPay
         </a>
         <nav className="main-nav">
@@ -29,10 +30,13 @@ function Header() {
         </nav>
         <div className="header-actions">
           <button className="lang-switcher">PT</button>
-          <a href="#" className="btn btn-primary">
+          <a href="#" className="btn btn-white">
             Baixe o App
           </a>
           <button className="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
             <span></span>
             <span></span>
             <span></span>
