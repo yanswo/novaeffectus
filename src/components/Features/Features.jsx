@@ -3,22 +3,22 @@ import "./Features.css";
 
 const featuresData = [
   {
-    title: "Quick Activation",
+    title: "Ativação Rápida",
     description:
-      "Get your virtual Mastercard in the app — ready to use right away",
-    imageUrl: "https://placehold.co/580x520/a57df1/fff?text=Card",
+      "Receba seu Mastercard virtual no app — pronto para usar imediatamente.",
+    imageUrl: "https://placehold.co/580x520/0a192f/00f5c3?text=Setup",
   },
   {
-    title: "Full Control",
+    title: "Controle Total",
     description:
-      "Manage your card anytime — block, unblock, and tweak settings right in the app",
-    imageUrl: "https://placehold.co/580x520/690dd3/fff?text=Phone+1",
+      "Gerencie seu cartão a qualquer momento — bloqueie, desbloqueie e ajuste configurações direto no app.",
+    imageUrl: "https://placehold.co/580x520/0a192f/57b0f0?text=Dashboard",
   },
   {
-    title: "Secure Payments",
+    title: "Pagamentos Seguros",
     description:
-      "Pay online and in stores across Europe with Mastercard — safely and easily",
-    imageUrl: "https://placehold.co/580x520/9163f5/fff?text=Phone+2",
+      "Pague online e em lojas por toda a Europa com Mastercard — de forma fácil e segura.",
+    imageUrl: "https://placehold.co/580x520/0a192f/ccd6f6?text=Segurança",
   },
 ];
 
@@ -26,9 +26,7 @@ function Features() {
   return (
     <section className="features-section">
       <div className="container">
-        {}
         <div className="features-content-box">
-          {}
           {featuresData.map((feature, index) => (
             <div className="feature-block" key={index}>
               <div className="feature-image">

@@ -3,21 +3,19 @@ import "./ActionBanner.css";
 
 function ActionBanner() {
   return (
-    <div className="action-banner">
-      <div className="container action-banner-container">
-        <h2 className="action-banner-title">Simplify Your Finances Today</h2>
-
+    <section className="action-banner-section">
+      <div className="container">
+        <h2 className="action-banner-title">Simplifique Suas Finanças Hoje</h2>
         <div className="action-banner-button-wrapper">
-          {}
           <div className="wave"></div>
           <div className="wave"></div>
           <div className="wave"></div>
-          <a href="#" className="btn btn-white btn-large">
-            Get the app
+          <a href="#" className="btn btn-primary btn-large">
+            Baixe o App
           </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

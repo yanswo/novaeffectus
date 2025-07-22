@@ -4,30 +4,23 @@ import "./MainBanner.css";
 function MainBanner() {
   return (
     <section className="main-banner-section">
-      <div className="container">
-        <div className="main-banner-wrapper">
-          {}
-          <div className="main-banner-media">
-            {}
-            <img
-              src="https://placehold.co/460x940/ffffff/290063?text=App+Video"
-              alt="App demonstration"
-            />
-          </div>
-
-          {}
-          <div className="main-banner-content">
-            <h2>Easy Transfers Across Europe</h2>
-            <p>
-              Send money fast and worry-free. Whether it’s EUR or PLN, our
-              transfers support both local and European payments — simple,
-              secure, and ready when you are.
-            </p>
-            {}
-            <a href="#" className="btn btn-white btn-large">
-              Get the app
-            </a>
-          </div>
+      <div className="container main-banner-container">
+        <div className="main-banner-media">
+          <img
+            src="https://placehold.co/500x500/f8fafc/1e293b?text=Visual"
+            alt="Demonstração do App"
+          />
+        </div>
+        <div className="main-banner-content">
+          <h2>Transferências Fáceis por toda a Europa</h2>
+          <p>
+            Envie dinheiro de forma rápida e sem preocupações. Seja em EUR ou
+            PLN, nossas transferências suportam pagamentos locais e europeus —
+            simples, seguro e pronto quando você precisar.
+          </p>
+          <a href="#" className="btn btn-primary">
+            Baixe o App
+          </a>
         </div>
       </div>
     </section>

@@ -1,55 +1,45 @@
 import React from "react";
-import ActionBanner from "../ActionBanner/ActionBanner";
 import "./Footer.css";
 
-const menuData = {
-  Products: [{ label: "Personal", url: "#" }],
-  Company: [{ label: "About Us", url: "#" }],
-  Help: [
-    { label: "Contact Us", url: "#" },
-    { label: "FAQ", url: "#", soon: true },
+const footerMenu = {
+  "Produtos e Serviços": [{ label: "Pessoal", url: "#" }],
+  Empresa: [{ label: "Sobre Nós", url: "#" }],
+  Ajuda: [
+    { label: "Fale Conosco", url: "#" },
+    { label: "FAQ", url: "#" },
   ],
   Legal: [
-    { label: "Privacy Policy", url: "#" },
-    { label: "Complaint Handling Policy", url: "#" },
-    { label: "Tariffs", url: "#" },
+    { label: "Política de Privacidade", url: "#" },
+    { label: "Termos e Condições", url: "#" },
   ],
 };
 
 function Footer() {
   return (
     <footer className="site-footer">
-      {}
-      <ActionBanner />
-
-      {}
-      <div className="container footer-main-content">
-        <div className="footer-menu-grid">
-          {Object.entries(menuData).map(([title, links]) => (
-            <div className="footer-menu-group" key={title}>
-              <h3>{title}</h3>
-              <ul>
-                {links.map((link) => (
-                  <li key={link.label}>
-                    <a href={link.url}>
-                      {link.label}
-                      {link.soon && <span className="soon-label">Soon</span>}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+      <div className="container footer-grid">
+        <div className="footer-column footer-brand">
+          <a href="/" className="footer-logo">
+            NovaPay
+          </a>
+          <p>Serviços financeiros para o seu dia a dia na Europa.</p>
         </div>
 
-        {}
-        <div className="footer-copyright">
-          <p>© 2025 NovaPay EU UAB. All rights reserved.</p>
-          <p>
-            All financial services are subject to terms and conditions.
-            Financial services are provided through our trusted partner Quicko.
-          </p>
-        </div>
+        {Object.entries(footerMenu).map(([title, links]) => (
+          <div className="footer-column" key={title}>
+            <h3>{title}</h3>
+            <ul>
+              {links.map((link) => (
+                <li key={link.label}>
+                  <a href={link.url}>{link.label}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+      <div className="footer-bottom">
+        <p>© 2025 NovaPay EU UAB. Todos os direitos reservados.</p>
       </div>
     </footer>
   );
