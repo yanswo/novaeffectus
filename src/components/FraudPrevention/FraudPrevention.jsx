@@ -28,7 +28,7 @@ function Card({ card }) {
 
   const { scrollYProgress } = useScroll({
     target: cardRef,
-    offset: ["start end", "end start"],
+    offset: ["start 1.4", "end 0.5"],
   });
 
   const translateX = useTransform(

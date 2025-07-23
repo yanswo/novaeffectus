@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import earth from "../../assets/terra.png";
 import taxes from "../../assets/taxes.png";
@@ -22,21 +22,26 @@ const benefitsData = [
     imageUrl: crypt,
   },
 ];
-
 function Card({ benefit, i }) {
   const cardRef = useRef(null);
+  const { scrollY } = useScroll();
 
-  const { scrollYProgress } = useScroll({
-    target: cardRef,
-    offset: ["start end", "end start"],
-  });
+  const [isMobile, setIsMobile] = useState(false);
 
-  const translateX = useTransform(
-    scrollYProgress,
-    [0, 0.2, 0.8, 1],
-    ["50%", "0%", "0%", "50%"]
-  );
-  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth <= 768);
+    }
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const start = isMobile ? 4200 + i * 150 : 2400 + i * 350;
+  const end = start + (isMobile ? 250 : 300);
+
+  const translateX = useTransform(scrollY, [start, end], ["50%", "0%"]);
+  const opacity = useTransform(scrollY, [start, end], [0, 1]);
 
   return (
     <motion.div
