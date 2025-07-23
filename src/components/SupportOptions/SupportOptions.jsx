@@ -9,13 +9,6 @@ const supportCardsData = [
     contact: "internationalsupport@novaeffectus.com",
     contactType: "email",
   },
-  {
-    title: "Suporte por Telefone",
-    description:
-      "Precisa de ajuda agora? Ligue para a nossa linha de suporte 24/7:",
-    contact: "+370 5 208 4800",
-    contactType: "phone",
-  },
 ];
 
 function AnimatedCard({ card }) {

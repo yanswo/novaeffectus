@@ -21,7 +21,6 @@
 }
 
 .support-cards-wrapper {
-  display: grid;
   grid-template-columns: 1fr;
   gap: 32px;
   max-width: 900px;

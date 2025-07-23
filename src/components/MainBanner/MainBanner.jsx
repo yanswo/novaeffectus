@@ -1,48 +1,8 @@
-import React, { useRef, useMemo } from "react";
+import React, { useRef } from "react";
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
+
+import DynamicWaveAnimation from "./DynamicWaveAnimation";
 import "./MainBanner.css";
-
-const FlowingWaveAnimation = () => {
-  const particles = useMemo(() => {
-    return Array.from({ length: 70 }).map((_, index) => ({
-      id: index,
-      delay: Math.random() * 5,
-      duration: 3 + Math.random() * 4,
-      size: Math.random() * 2.5 + 1,
-    }));
-  }, []);
-
-  return (
-    <div className="wave-container">
-      {}
-      <div className="wave-background" />
-
-      {}
-      {particles.map((particle) => (
-        <motion.div
-          key={particle.id}
-          className="particle"
-          style={{
-            width: particle.size,
-            height: particle.size,
-          }}
-          animate={{
-            x: ["0%", "100%", "0%"],
-            y: ["50%", "30%", "70%", "50%"],
-            opacity: [0, 0.8, 0.8, 0],
-            scale: [0.5, 1, 0.5],
-          }}
-          transition={{
-            duration: particle.duration,
-            delay: particle.delay,
-            ease: "easeInOut",
-            repeat: Infinity,
-          }}
-        />
-      ))}
-    </div>
-  );
-};
 
 const InteractivePhone = () => {
   const ref = useRef(null);
@@ -82,7 +42,7 @@ const InteractivePhone = () => {
       <div className="phone-body">
         <div className="phone-screen">
           {}
-          <FlowingWaveAnimation />
+          <DynamicWaveAnimation />
         </div>
         <motion.div className="phone-glare" style={{ x: glareX, y: glareY }} />
       </div>

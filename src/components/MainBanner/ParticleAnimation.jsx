@@ -17,21 +17,6 @@ const ParticleAnimation = () => {
     fullScreen: { enable: false },
     detectRetina: true,
 
-    interactivity: {
-      events: {
-        onHover: {
-          enable: true,
-          mode: "repulse",
-        },
-      },
-      modes: {
-        repulse: {
-          distance: 60,
-          duration: 0.4,
-        },
-      },
-    },
-
     particles: [
       {
         number: { value: 400 },
@@ -43,7 +28,6 @@ const ParticleAnimation = () => {
           enable: true,
           speed: 0.5,
           direction: "none",
-          random: false,
           straight: true,
           outModes: "destroy",
           path: {
@@ -71,7 +55,6 @@ const ParticleAnimation = () => {
           enable: true,
           speed: 3,
           direction: "none",
-          random: false,
           straight: true,
           outModes: "destroy",
           path: {
@@ -92,13 +75,11 @@ const ParticleAnimation = () => {
   };
 
   return (
-    <div className="particle-container">
-      <Particles
-        id="tsparticles"
-        init={particlesInit}
-        options={particleOptions}
-      />
-    </div>
+    <Particles
+      id="tsparticles"
+      init={particlesInit}
+      options={particleOptions}
+    />
   );
 };
 
