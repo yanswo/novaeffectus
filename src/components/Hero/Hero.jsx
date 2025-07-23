@@ -3,8 +3,9 @@ import "./Hero.css";
 
 const defaultTitle = (
   <>
-    Serviços Financeiros <br />
-    Feitos para Você
+    Uma nova Ideia
+    <br />
+    Causa Efeitos que Globalizam
   </>
 );
 

@@ -12,7 +12,9 @@ const stepsData = [
     description: (
       <>
         Envie através da app ou envie-nos um email para{" "}
-        <a href="mailto:teste@novapay.lt">teste@novapay.lt</a>
+        <a href="mailto:internationalsupport@novaeffectus.com">
+          internationalsupport@novaeffectus.com
+        </a>
       </>
     ),
   },

@@ -6,7 +6,7 @@ const supportCardsData = [
   {
     title: "Suporte por Email",
     description: "Tem uma pergunta não urgente? Escreva para",
-    contact: "cc@novapay.lt",
+    contact: "internationalsupport@novaeffectus.com",
     contactType: "email",
   },
   {

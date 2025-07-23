@@ -1,53 +1,60 @@
 import React from "react";
+import first from "../../assets/first.png";
+import second from "../../assets/second.png";
+import third from "../../assets/third.png";
 import "./Features.css";
 
-const featuresData = [
-  {
-    title: "Ativação Rápida",
-    description:
-      "Receba seu Mastercard virtual no app — pronto para usar imediatamente.",
-    imageUrl: "https://placehold.co/580x435/111111/FFFFFF?text=Card",
-  },
-  {
-    title: "Controle Total",
-    description:
-      "Gerencie seu cartão a qualquer momento — bloqueie, desbloqueie e ajuste configurações direto no app.",
-    imageUrl: "https://placehold.co/580x435/111111/FFFFFF?text=Phone+1",
-  },
-  {
-    title: "Pagamentos Seguros",
-    description:
-      "Pague online e em lojas por toda a Europa com Mastercard — de forma fácil e segura.",
-    imageUrl: "https://placehold.co/580x435/111111/FFFFFF?text=Phone+2",
-  },
-];
+const Features = () => {
+  const featuresData = [
+    {
+      title: "Pagamentos Móveis Instantâneos",
+      description:
+        "Envie e receba dinheiro instantaneamente com amigos e familiares, tudo a partir do seu telemóvel.",
+      // A variável agora guarda a imagem importada
+      imageUrl: first,
+    },
+    {
+      title: "Cartões Virtuais Seguros",
+      description:
+        "Crie cartões virtuais descartáveis para compras online seguras e proteja as suas informações financeiras.",
+      imageUrl: second,
+    },
+    {
+      title: "Gestão Financeira Simplificada",
+      description:
+        "Acompanhe facilmente os seus gastos, defina orçamentos e analise as suas finanças num só lugar.",
+      imageUrl: third,
+    },
+  ];
 
-function Features() {
   return (
     <section className="features-section">
       <div className="container">
-        <div className="features-wrapper">
-          <div className="features-content-box">
-            {featuresData.map((feature, index) => (
-              <div className="feature-block" key={index}>
-                <span className="feature-image">
-                  <span className="feature-image-inner">
-                    <img src={feature.imageUrl} alt={feature.title} />
-                  </span>
-                </span>
-                <div className="feature-content">
-                  <h2 className="feature-title h2">{feature.title}</h2>
-                  <div className="feature-text">
-                    <p>{feature.description}</p>
-                  </div>
+        <h2 className="section-title">
+          Funcionalidades Poderosas na Palma da Sua Mão
+        </h2>
+        <div className="features-grid">
+          {featuresData.map((feature, index) => (
+            <div key={index} className="feature-card">
+              <div className="feature-phone-mockup">
+                <div className="feature-phone-screen">
+                  {/* ✅ A MUDANÇA ESTÁ AQUI: Usamos a prop 'style' 
+                    para definir o backgroundImage dinamicamente.
+                  */}
+                  <div
+                    className="screen-content"
+                    style={{ backgroundImage: `url(${feature.imageUrl})` }}
+                  ></div>
                 </div>
               </div>
-            ))}
-          </div>
+              <h3 className="feature-title">{feature.title}</h3>
+              <p className="feature-description">{feature.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default Features;

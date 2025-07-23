@@ -7,7 +7,7 @@ function Header({ theme }) {
     <header className={`site-header ${theme}`}>
       <div className="container header-wrapper">
         <NavLink to="/" className="logo">
-          NovaPay
+          NovaEffectus
         </NavLink>
         <nav className="main-nav">
           <ul>

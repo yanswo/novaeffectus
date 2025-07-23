@@ -32,7 +32,7 @@ function Footer() {
 
             {}
             <a
-              href="mailto:teste@exemplo.com"
+              href="mailto:internationalsupport@novaeffectus.com"
               className="btn btn-white action-banner-btn"
             >
               Entre em Contato

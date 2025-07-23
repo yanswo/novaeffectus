@@ -60,7 +60,7 @@
   background: linear-gradient(-35deg, #0000af, var(--secondary-accent));
 }
 .card-bg-accent {
-  background: linear-gradient(-35deg, var(--accent-light-blue), #5f9ea0);
+  background-color: var(--accent-light-blue);
 }
 
 .benefit-card-text {

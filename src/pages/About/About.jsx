@@ -8,9 +8,9 @@ import Footer from "../../components/Footer/Footer";
 function About() {
   const aboutTitle = (
     <>
-      Uma Nova Abordagem
+      Uma nova Abordagem
       <br />
-      para Finanças na Europa
+      Para Finanças na Europa
     </>
   );
   const aboutText =

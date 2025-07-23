@@ -1,5 +1,7 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import email from "../../assets/email.png";
+import protec from "../../assets/protection.png";
 import "./FraudPrevention.css";
 
 const fraudCardsData = [
@@ -12,14 +14,12 @@ const fraudCardsData = [
   {
     text: "Verifique sempre os e-mails e mensagens de texto que enviamos",
     bgColorClass: "card-bg-blue",
-    imageUrl:
-      "https://cdn3d.iconscout.com/3d/premium/thumb/mailbox-4348572-3612149.png",
+    imageUrl: email,
   },
   {
     text: "Se algo parecer suspeito, avise-nos imediatamente",
     bgColorClass: "card-bg-purple",
-    imageUrl:
-      "https://cdn3d.iconscout.com/3d/premium/thumb/warning-sign-5713918-4780210.png",
+    imageUrl: protec,
   },
 ];
 

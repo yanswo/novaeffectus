@@ -1,25 +1,25 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import earth from "../../assets/terra.png";
+import taxes from "../../assets/taxes.png";
+import crypt from "../../assets/crypt.jpg";
 import "./Benefits.css";
 
 const benefitsData = [
   {
     text: "Taxas baixas com preços transparentes",
     bgColorClass: "card-bg-dark",
-    imageUrl:
-      "https://cdn3d.iconscout.com/3d/premium/thumb/crypto-coin-5691538-4741047.png",
+    imageUrl: taxes,
   },
   {
     text: "Suporte Multilíngue\u2028ao Vivo, incluindo Ucraniano",
     bgColorClass: "card-bg-navy",
-    imageUrl:
-      "https://cdn3d.iconscout.com/3d/premium/thumb/global-network-5275624-4422938.png",
+    imageUrl: earth,
   },
   {
     text: "Totalmente seguro e em conformidade com GDPR/AML",
     bgColorClass: "card-bg-accent",
-    imageUrl:
-      "https://cdn3d.iconscout.com/3d/premium/thumb/document-security-5522079-4623631.png",
+    imageUrl: crypt,
   },
 ];
 
@@ -55,7 +55,7 @@ function Benefits() {
     <section className="benefits-section">
       <div className="container benefits-container">
         <div className="benefits-content-sticky">
-          <h2 className="benefits-title h2">Por que NovaPay?</h2>
+          <h2 className="benefits-title h2">Por que NovaEffectus?</h2>
           <div className="benefits-text">
             <p>
               Cartões virtuais seguros vinculados às suas contas em EUR ou PLN.
